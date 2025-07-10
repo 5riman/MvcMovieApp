@@ -9,9 +9,16 @@ namespace MvcMovie.Controllers
         {
             return View();
         }
-        public string Welcome(string name,int age=1)
+        //public string Welcome(string name,int age=1)
+        //{
+        //    return HtmlEncoder.Default.Encode($"Hello {name}, your age is: {age}"); 
+        //}
+
+        public IActionResult Welcome(string name, int age = 1)
         {
-            return HtmlEncoder.Default.Encode($"Hello {name}, your age is: {age}"); 
+            ViewData["Message"] = "Hi" + name;
+            ViewData["Age"] = age;
+            return View();
         }
     }
 }   
