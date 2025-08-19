@@ -4,7 +4,7 @@ using MvcMovie.Data;
 using System;
 using System.Linq;
 namespace MvcMovie.Models;
-
+    
 public static class SeedData
     {
         public static void Initialize(IServiceProvider serviceProvider)
